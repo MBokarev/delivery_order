@@ -7,6 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import ru.netology.delivery.data.DataGenerator;
+import ru.netology.delivery.data.DataHelper;
 
 import java.time.Duration;
 
@@ -32,7 +33,7 @@ class DeliveryTest {
         var daysToAddForFirstMeeting = 4;
         var daysToAddForSecondMeeting = 7;
 
-        var validUser = DataGenerator.Registration.generateUser("ru");
+        var validUser = DataHelper.Registration.generateUser("ru");
         $("[placeholder=\"Дата встречи\"]").sendKeys(deleteString);
         var firstMeetingDate = DataGenerator.generateDate(daysToAddForFirstMeeting);
         $("body").click();

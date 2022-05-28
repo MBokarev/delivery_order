@@ -38,24 +38,5 @@ public class DataGenerator {
         String phone = faker.phoneNumber().phoneNumber();
         return phone;
     }
-
-    public static class Registration {
-        private Registration() {
-        }
-
-        public static UserInfo generateUser(String locale) {
-            UserInfo user = new UserInfo("ru","ru","ru");
-            $("[placeholder=\"Город\"]").setValue(DataGenerator.generateCity("ru"));
-            $("[name=\"name\"]").setValue(DataGenerator.generateName("ru"));
-            $("[name=\"phone\"]").setValue(DataGenerator.generatePhone("ru"));
-            return user;
-        }
-    }
-
-    @Value
-    public static class UserInfo {
-        String city;
-        String name;
-        String phone;
-    }
 }
+
