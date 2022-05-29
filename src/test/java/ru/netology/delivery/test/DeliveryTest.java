@@ -36,7 +36,6 @@ class DeliveryTest {
         $("[placeholder=\"Дата встречи\"]").setValue(user.getFirstDate());
         $("[name=\"name\"]").setValue(user.getName());
         $("[name=\"phone\"]").setValue(user.getPhone());
-        $("body").click();
         $("[class=\"checkbox__box\"]").click();
         $x("//*[text()=\"Запланировать\"]").click();
         $(withText("Успешно!")).should(visible, Duration.ofSeconds(15));
